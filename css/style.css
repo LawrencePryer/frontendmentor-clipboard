@@ -1,0 +1,431 @@
+/* ============================== */
+/*            CONTENTS   
+1. Varaibles
+2. Reset
+3. Global Styles
+4. Utility Classes
+    4.1 Section styling
+    4.2 Container
+    4.3 Button Styling
+5. Homepage Styling
+    5.1 Section 1 (Hero Section)
+    5.2 Section 2
+    5.3 Section 3
+    5.4 Section 4 
+    5.5 Clients
+    5.6 Bottom CTA
+6. Footer Styling
+7. Media Queries
+    7.1 Max-width: 1200px
+    7.2 Max-width: 980px
+    7.3 Max-width: 630px
+*/
+/* ============================== */
+
+/* ------------------------------ */
+/* 1. VARIABLES                   */
+/* ------------------------------ */
+
+:root {
+  --primary-color: hsl(171, 66%, 44%);
+  --secondary-color: hsl(233, 100%, 69%);
+  --text-dark: hsl(210, 10%, 33%);
+  --text-light: hsl(201, 11%, 66%);
+}
+
+/* ------------------------------ */
+/* 2. RESET                       */
+/* ------------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------ */
+/* 3. GLOBAL STYLES               */
+/* ------------------------------ */
+
+body {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 18px;
+}
+
+h1 {
+  color: var(--text-dark);
+  font-size: 3.4rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: var(--text-light);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+h3 {
+  color: var(--text-dark);
+  font-size: 2.5rem;
+  margin-bottom: 1.4rem;
+}
+
+h4 {
+  color: var(--text-dark);
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+}
+
+p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------ */
+/* 4. UTILITIES                   */
+/* ------------------------------ */
+
+/* ----- 4.1 UTILITIES: Section Styling ----- */
+
+.section {
+  width: 100%;
+  margin: 2rem auto 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.section__top {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section__top p {
+  max-width: 60ch;
+  font-size: 1.2rem;
+}
+
+.small-bot-margin {
+  margin-bottom: 3rem;
+}
+
+/* ----- 4.2 UTILITIES: Container ----- */
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+/* ----- 4.3 UTILITIES: Button Styling ----- */
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 100px;
+  cursor: pointer;
+  margin: 1rem 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  opacity: 0.85;
+  color: #fff;
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+
+/* ------------------------------ */
+/* 5. HOMEPAGE STYLING            */
+/* ------------------------------ */
+
+/* ----- 5.1 MAIN STYLING: Section 1 (Hero Section) -----*/
+
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../img/bg-header-desktop.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-section .main-logo {
+  margin-bottom: 5rem;
+  width: 160px;
+}
+
+.hero-section h2 {
+  max-width: 55ch;
+  margin: 0 2rem;
+}
+
+.hero-section__cta {
+  margin-top: 2.8rem;
+}
+
+/* ----- 5.2 MAIN STYLING: Section 2 -----*/
+
+.section-2__bottom {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.section-2__bottom img {
+  position: relative;
+  left: -10%;
+  width: 110%;
+}
+
+.section-2__bottom--list {
+  display: flex;
+  max-width: 50ch;
+  flex-direction: column;
+  margin-left: 9rem;
+  margin-right: 3rem;
+}
+
+.section-2__bottom--list p {
+  margin-bottom: 4rem;
+  max-width: 35ch;
+}
+
+/* ----- 5.3 MAIN STYLING: Section 3 -----*/
+/* No customer styling on section 3 */
+
+/* ----- 5.4 MAIN STYLING: Section 4 -----*/
+.section-4__bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+  text-align: center;
+}
+
+.section-4__bottom img {
+  margin-bottom: 2rem;
+  height: 50px;
+  width: auto;
+}
+
+.section-4__bottom h4 {
+  margin-bottom: 2rem;
+}
+
+/* ----- 5.5 MAIN STYLING: Clients -----*/
+.clients {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----- 5.6 MAIN STYLING: Bottom CTA -----*/
+.bottom-cta {
+  margin: 10rem auto;
+}
+
+/* ------------------------------ */
+/* 6. FOOTER STYLING              */
+/* ------------------------------ */
+
+.footer {
+  background-color: #eee;
+}
+
+.footer-container {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-gap: 2rem;
+  background-color: #eee;
+  padding: 2rem 5rem;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 50px;
+  width: auto;
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-social a {
+  margin-left: 1.5rem;
+}
+
+/* ------------------------------ */
+/* 7. MEDIA QUERIES               */
+/* ------------------------------ */
+
+/* ----- 7.1 Max-width: 1200px ----- */
+@media (max-width: 1200px) {
+  .clients {
+    grid-gap: 3rem;
+  }
+
+  .footer-container {
+    width: 100%;
+  }
+
+  .section-2__bottom--list p {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ----- 7.2 Max-width: 980px ----- */
+@media (max-width: 980px) {
+  .hero-section {
+    background-image: url('../img/bg-header-mobile.png');
+  }
+
+  .section {
+    width: 100%;
+    margin: 2rem auto 5rem;
+  }
+
+  .section__top {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-2__bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .section-2__bottom img {
+    position: relative;
+    left: 0%;
+    width: 70%;
+    margin: 0 auto 3rem;
+  }
+
+  .section-2__bottom--list {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .section-2__bottom--list p {
+    max-width: 100%;
+  }
+
+  .section-4__bottom {
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    text-align: center;
+  }
+
+  .clients {
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+    max-width: 180px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+/* ----- 7.3 Max-width: 630px ----- */
+@media (max-width: 630px) {
+  .btn {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    margin: 0.7rem 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  .hero-section .main-logo {
+    margin-bottom: 3.5rem;
+    width: 140px;
+  }
+
+  .hero-section__cta,
+  .full-width-btn {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    text-align: center;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}
